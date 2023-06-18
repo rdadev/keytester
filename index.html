@@ -1,0 +1,253 @@
+<!-- 
+* Keytester v1.0.0 (https://rda.dev.br/keytester/)
+* Copyright 2023 Rafael de Andrade - RDADEV
+* Licenciado por GNU AFFERO GENERAL PUBLIC LICENSE 3.0 (https://github.com/rdadev/keytester/blob/main/LICENSE)
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Teste seu teclado online de forma rápida para verificar possíveis erros de hardware. Compatível com o padrão brasileiro ABNT e ABNT2"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://www.rda.dev.br/keytester">
+  <meta property="og:url" content="https://www.rda.dev.br/keytester">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="KEY-TESTER">
+  <meta property="og:description" content="Teste seu teclado online de forma rápida para verificar possíveis erros de hardware. Compatível com o padrão brasileiro ABNT e ABNT2">
+  <meta property="og:locale" content="pt_BR">
+
+  <link rel="stylesheet" type="text/css" href="src/bootstrap.css"/>
+  <link rel="stylesheet" type="text/css" href="src/style.css"/>
+  <script src="src/script.js"></script>
+  <title>KEY-TESTER</title>
+</head>
+
+<body>
+  <div class="caixa">
+    <h1 class="titulo"><b>KEY-</b>TESTER</h1>
+    <select id="beep" class="mb-3">
+      <option selected>Silencioso</option>
+      <option value="Beep">Beep</option>
+    </select>
+    <div class="teclado">
+      <div class="row">
+        <div class="col-8">
+          <div class="d-flex flex-row bd-highlight">
+            <div id="Escape" class="key funcoes espaco1">Esc</div>
+            <div id="F1" class="key funcoes">F1</div>
+            <div id="F2" class="key funcoes">F2</div>
+            <div id="F3" class="key funcoes">F3</div>
+            <div id="F4" class="key funcoes espaco2">F4</div>
+            <div id="F5" class="key funcoes">F5</div>
+            <div id="F6" class="key funcoes">F6</div>
+            <div id="F7" class="key funcoes">F7</div>
+            <div id="F8" class="key funcoes espaco2">F8</div>
+            <div id="F9" class="key funcoes">F9</div>
+            <div id="F10" class="key funcoes">F10</div>
+            <div id="F11" class="key funcoes">F11</div>
+            <div id="F12" class="key funcoes">F12</div>
+          </div>
+
+          <div class="d-flex flex-row bd-highlight">
+            <div id="Backquote" class="key">"<br/>'</div>
+            <div id="Digit1" class="key num">!<br/>1</div>
+            <div id="Digit2" class="key num">@<br/>2</div>
+            <div id="Digit3" class="key num">#<br/>3</div>
+            <div id="Digit4" class="key num">$<br/>4</div>
+            <div id="Digit5" class="key num">%<br/>5</div>
+            <div id="Digit6" class="key num">^<br/>6</div>
+            <div id="Digit7" class="key num">&<br/>7</div>
+            <div id="Digit8" class="key num">*<br/>8</div>
+            <div id="Digit9" class="key num">(<br/>9</div>
+            <div id="Digit0" class="key num">)<br/>0</div>
+            <div id="Minus" class="key num">_<br/>-</div>
+            <div id="Equal" class="key num">+<br/>=</div>
+            <div id="Backspace" class="key backspace">Backspace</div>
+          </div>
+
+          <div class="d-flex flex-row bd-highlight">
+            <div id="Tab" class="key tab">Tab</div>
+            <div id="KeyQ" class="key">Q</div>
+            <div id="KeyW" class="key">W</div>
+            <div id="KeyE" class="key">E</div>
+            <div id="KeyR" class="key">R</div>
+            <div id="KeyT" class="key">T</div>
+            <div id="KeyY" class="key">Y</div>
+            <div id="KeyU" class="key">U</div>
+            <div id="KeyI" class="key">I</div>
+            <div id="KeyO" class="key">O</div>
+            <div id="KeyP" class="key">P</div>
+            <div id="BracketLeft" class="key">`<br/>´</div>
+            <div id="BracketRight" class="key">{<br/>[</div>
+            <div id="Enter" class="key enter1">Enter</div>
+          </div>
+
+          <div class="d-flex flex-row bd-highlight">
+            <div id="CapsLock" class="key caps">CapsLk</div>
+            <div id="KeyA" class="key">A</div>
+            <div id="KeyS" class="key">S</div>
+            <div id="KeyD" class="key">D</div>
+            <div id="KeyF" class="key">F</div>
+            <div id="KeyG" class="key">G</div>
+            <div id="KeyH" class="key">H</div>
+            <div id="KeyJ" class="key">J</div>
+            <div id="KeyK" class="key">K</div>
+            <div id="KeyL" class="key">L</div>
+            <div id="Semicolon" class="key">Ç</div>
+            <div id="Quote" class="key num">^<br />~</div>
+            <div id="Backslash" class="key">}<br />]</div>
+            <div id="Enter2" class="key enter2"></div>
+          </div>
+
+          <div class="d-flex flex-row bd-highlight">
+            <div id="ShiftLeft" class="key shift-left">Shift</div>
+            <div id="IntlBackslash" class="key">|<br />\</div>
+            <div id="KeyZ" class="key">Z</div>
+            <div id="KeyX" class="key">X</div>
+            <div id="KeyC" class="key">C</div>
+            <div id="KeyV" class="key">V</div>
+            <div id="KeyB" class="key">B</div>
+            <div id="KeyN" class="key">N</div>
+            <div id="KeyM" class="key">M</div>
+            <div id="Comma" class="key"><<br/>,</div>
+            <div id="Period" class="key">><br />.</div>
+            <div id="Slash" class="key">:<br />;</div>
+            <div id="IntlRo" class="key">?<br />/</div>
+            <div id="ShiftRight" class="key shift-right">Shift</div>
+          </div>
+
+          <div class="d-flex flex-row bd-highlight">
+            <div id="ControlLeft" class="key ctrl">Ctrl</div>
+            <div id="MetaLeft" class="key modificados">Win</div>
+            <div id="AltLeft" class="key modificados">Alt</div>
+            <div id="Space" class="key space"></div>
+            <div id="AltRight" class="key modificados">AltGr</div>
+            <div id="MetaRight" class="key modificados">Win</div>
+            <div id="ContextMenu" class="key modificados">Prnt</div>
+            <div id="ControlRight" class="key ctrl">Ctrl</div>
+          </div>
+        </div>
+
+        <div class="col-2">
+          <div class="d-flex flex-row bd-highlight">
+            <div id="Undefined" class="key funcoes outras">Print Screen</div>
+            <div id="ScrollLock" class="key funcoes outras">Scroll Lock</div>
+            <div id="Pause" class="key funcoes outras">Pause Break</div>
+          </div>
+
+          <div class="d-flex flex-row bd-highlight">
+            <div id="Insert" class="especial">Insert</div>
+            <div id="Home" class="especial">Home</div>
+            <div id="PageUp" class="especial">PgUp</div>
+          </div>
+
+          <div class="d-flex flex-row bd-highlight">
+            <div id="Delete" class="especial">Del</div>
+            <div id="End" class="especial">End</div>
+            <div id="PageDown" class="especial">PgDn</div>
+          </div>
+
+          <div class="d-flex flex-row bd-highlight">
+            <div class="key fantasma"></div>
+          </div>
+
+          <div class="d-flex flex-row bd-highlight">
+            <div class="key fantasma"></div>
+            <div id="ArrowUp" class="setas">
+              <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path fill="#FFFFFF" d="M452-244v-400L282-477l-42-43 241-241 241 241-42 42-168-168v402h-60Z"/></svg>
+            </div>
+          </div>
+          <div class="d-flex flex-row bd-highlight">
+            <div id="ArrowLeft" class="setas">
+              <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path fill="#FFFFFF" d="M400-240 160-480l241-241 43 42-169 169h526v60H275l168 168-43 42Z"/></svg>
+            </div>
+            <div id="ArrowDown" class="setas">
+              <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path fill="#FFFFFF" d="M479-240 238-481l42-43 170 167v-400h60v402l168-168 42 42-241 241Z"/></svg>
+            </div>
+            <div id="ArrowRight" class="setas">
+              <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path fill="#FFFFFF" d="m561-242-43-42 168-168H160v-60h526L517-681l43-42 241 241-240 240Z"/></svg>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="d-flex flex-row bd-highlight">
+            <div class="row luzes">
+              <div class="col-4">1<br><span></span></div>
+              <div class="col-4">A<br><span></span></div>
+              <div class="col-4">V<br><span></span></div>
+            </div>
+          </div>
+
+          <div class="d-flex flex-row bd-highlight">
+            <div id="NumLock" class="numericos numerico-nl">Num Lock</div>
+            <div id="NumpadDivide" class="numericos">/</div>
+            <div id="NumpadMultiply" class="numericos">*</div>
+            <div id="NumpadSubtract" class="numericos">-</div>
+          </div>
+          
+          <div class="d-flex flex-row bd-highlight">
+            <div id="Numpad7" class="numericos">7</div>
+            <div id="Numpad8" class="numericos">8</div>
+            <div id="Numpad9" class="numericos">9</div>
+            <div id="NumpadAdd" class="numericos">+</div>
+          </div>
+
+          <div class="d-flex flex-row bd-highlight">
+            <div id="Numpad4" class="numericos">4</div>
+            <div id="Numpad5" class="numericos">5</div>
+            <div id="Numpad6" class="numericos">6 <br></div>
+            <div id="NumpadComma" class="numericos">.</div>
+          </div>
+
+          <div class="d-flex flex-row bd-highlight">
+            <div id="Numpad1" class="numericos">1</div>
+            <div id="Numpad2" class="numericos">2</div>
+            <div id="Numpad3" class="numericos">3</div>
+            <div id="NumpadEnter" class="numericos numerico-enter1">Enter</div>
+          </div>
+
+          <div class="d-flex flex-row bd-highlight">
+            <div id="Numpad0" class="numericos numerico-zero">0</div>
+            <div id="NumpadDecimal" class="numericos">,</div>
+            <div id="NumpadEnter2" class="numericos numerico-enter2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <p id="data-teste" class="mt-2 mb-5">Teste realizado em <b>17/06/23 às 22:48h</b></p>
+        <h3 class="titulo subtitulo">Modo de uso</h3>
+        <p  class="texto">Para testar o teclado, pressione qualquer tecla. As teclas deverão ficar verdes ao serem pressionadas e será emitido um beep ao pressionar. Lembre-se de que nem todos os teclados possuem todas as teclas do padrão ABNT, podendo haver teclas não pressionadas no final do teste.</p>
+        <div class="row legenda">
+          <div class="key ativa">A</div>
+          <p><b>Tecla ativada</b> (Pressionando)</p>
+        </div>
+        <div class="row legenda">
+          <div class="key testada">A</div>
+          <p><b>Tecla liberada</b> (Liberada)</p>
+        </div>
+        <div class="row legenda">
+          <div class="key inexistente">A</div>
+          <p><b>Tecla normal</b> (Não pressionada ou inexistente)</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="mt-1 mb-1 container-fluid">
+        <button type="button" class="botoes verde" onclick="window.print()">Imprimir</button>
+        <button type="button" class="botoes secundario" onclick="window.location.reload(true)">Reiniciar</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Desenvolvido por <a href="https://github.com/rdadev" target="_blank">Rafael de Andrade</a></p>
+  </footer>
+</body>
+
+</html>
