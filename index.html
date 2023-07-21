@@ -21,8 +21,8 @@
   <meta property="og:locale" content="pt_BR">
 
   <link rel="stylesheet" type="text/css" href="src/bootstrap.css"/>
-  <link rel="stylesheet" type="text/css" href="src/style.css"/>
-  <script src="src/script.js"></script>
+  <link rel="stylesheet" type="text/css" href="src/keytester.css"/>
+  <script src="src/keytester.js"></script>
   <title>KEY-TESTER</title>
 </head>
 
@@ -220,7 +220,7 @@
     </div>
     <div class="row">
       <div class="col-12">
-        <p id="data-teste" class="mt-2 mb-5">Teste realizado em <b>17/06/23 às 22:48h</b></p>
+        <p id="data-teste" class="mt-2 mb-5"></p>
         <h3 class="titulo subtitulo">Modo de uso</h3>
         <p  class="texto">Para testar o teclado, pressione qualquer tecla. As teclas deverão ficar verdes ao serem pressionadas e será emitido um beep ao pressionar. Lembre-se de que nem todos os teclados possuem todas as teclas do padrão ABNT, podendo haver teclas não pressionadas no final do teste.</p>
         <div class="row legenda">
@@ -248,6 +248,16 @@
   <footer>
     <p>Desenvolvido por <a href="https://github.com/rdadev" target="_blank">Rafael de Andrade</a></p>
   </footer>
+
+  <script>
+    window.onload = function() {
+      const texto = document.querySelector("#data-teste");
+      var day = new Date();
+      var now = day.toLocaleString();
+
+      texto.innerHTML = "Teste realizado em <b>" + now + "</b>";
+    };
+  </script>
 </body>
 
 </html>

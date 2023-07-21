@@ -1,0 +1,357 @@
+/*!
+ * Keytester v1.0.0 (https://rda.dev.br/keytester/)
+ * Copyright 2023 Rafael de Andrade - RDADEV
+ * Licenciado por GNU AFFERO GENERAL PUBLIC LICENSE 3.0 (https://github.com/rdadev/keytester/blob/main/LICENSE)
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&display=swap');
+
+html, button, input, select {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+* {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+::selection {
+  background-color: #204747;
+  color: #FFFFFF;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+.caixa {
+  width: 92%;
+  margin: 0 auto;
+  min-width: 1100px;
+}
+
+.titulo {
+  margin: 25px 0;
+  color: #000000;
+}
+
+.subtitulo {
+  font-size: 20pt;
+  font-weight: 700;
+  color: #000000;
+}
+
+.teclado {
+  display: block;
+  height: 380px;
+  background-color: #252525;
+  border-radius: 13px;
+  padding: 20px;
+  color: #eee;
+}
+
+.luzes {
+  width: 100%;
+  margin-left: 5px;
+  margin-bottom: 27px;
+}
+
+.luzes span {
+  width: 11px;
+  height: 8px;
+  top: 22px;
+  background-color: #ecc61c;
+  position: absolute;
+  border-radius: 3px;
+  margin-top: 4px;
+}
+
+.key, .numericos {
+  width: 45px;
+  height: 45px;
+  display: block;
+  font-size: 11pt;
+  font-weight: 600;
+  background-color: #000000;
+  text-align: left;
+  padding-left: 7px;
+  line-height: 1.5;
+  border-radius: 5px;
+  float: left;
+  margin-left: 5px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.especial,
+.setas {
+  width: 45px;
+  height: 45px;
+  display: block;
+  background-color: #000000;
+  text-align: left;
+  line-height: 1.5;
+  border-radius: 5px;
+  float: left;
+  margin-left: 5px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.especial {
+  font-weight: 500;
+  font-size: 8pt;
+  padding: 5px;
+}
+
+.setas {
+  padding: 8px;
+}
+
+.numericos {
+  line-height: 1.1;
+  padding: 5px 7px;
+}
+
+.funcoes {
+  font-size: 10pt;
+  width: 45px;
+  height: 30px;
+  margin-bottom: 15px;
+}
+
+.outras {
+  font-size: 9pt;
+  line-height: 1.1;
+  font-weight: 400;
+  text-align: center;
+  padding: 0 5px;
+  height: 30px !important;
+}
+
+.key:hover, .especial:hover, .setas:hover, .numericos:hover, .funcoes:hover, .outras:hover {
+  background-color: #0f0f0f;
+  color: #FFFFFF;
+}
+
+.espaco1 {
+  margin-right: 43px !important;
+}
+
+.espaco2 {
+  margin-right: 25px !important;
+}
+
+.backspace {
+  width: 90px;
+  font-size: 9pt;
+  line-height: 3;
+}
+
+.tab {
+  width: 65px;
+  font-size: 9pt;
+  line-height: 3;
+}
+
+.letter {
+  width: 30px;
+}
+
+.slash {
+  width: 64px;
+}
+
+.caps {
+  width: 75px;
+  font-size: 9pt;
+  line-height: 3;
+}
+
+.enter1 {
+  width: 70px;
+  font-size: 12px;
+  line-height: 3;
+  border-radius: 5px 5px 0 5px;
+}
+
+.enter2 {
+  width: 60px;
+  height: 51px;
+  line-height: 40px;
+  font-size: 13px;
+  margin-top: 0;
+  border-radius: 0 0 5px 5px;
+}
+
+.shift-left {
+  width: 68px;
+  font-size: 9pt;
+  line-height: 3;
+}
+
+.shift-right {
+  width: 67px;
+  font-size: 9pt;
+  line-height: 3;
+}
+
+.ctrl {
+  width: 64px;
+  font-size: 9pt;
+  line-height: 3;
+}
+
+.space {
+  width: 352px;
+}
+
+.numerico-nl {
+  font-size: 9pt;
+}
+
+.numerico-zero {
+  width: 97px;
+}
+
+.numerico-enter1 {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  line-height: 3;
+  font-size: 9pt;
+  width: 55px;
+}
+
+.numerico-enter2 {
+  height: 51px;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  margin-top: 0;
+  width: 55px;
+}
+
+.modificados {
+  line-height: 40px;
+  font-size: 9pt;
+}
+
+.fantasma {
+  visibility: hidden;
+}
+
+.legenda {
+  line-height: 3;
+}
+
+.ativa {
+  color: #eee;
+  background-color: #007bff;
+  line-height: 3;
+  padding-left: 15px;
+  margin: 0 20px 0 15px;
+}
+
+.testada {
+  color: #eee;
+  background-color: green;
+  line-height: 3;
+  padding-left: 15px;
+  margin: 0 20px 0 15px;
+}
+
+.inexistente {
+  color: #eee;
+  background-color: #000000;
+  line-height: 3;
+  padding-left: 15px;
+  margin: 0 20px 0 15px;
+}
+
+footer {
+  background-color: #12191d;
+  text-align: center;
+  color: #fff;
+  margin-top: 40px;
+  padding: 5px 0;
+}
+
+footer a,
+footer p {
+  font-size: 10pt;
+}
+
+footer a {
+  color: #afece7;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #94c9c4;
+  text-decoration: none;
+}
+
+footer p {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  border: none;
+}
+
+.botoes {
+  float: right;
+  padding: 8px 16px;
+  margin-left: 5px;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 10pt;
+  border-radius: 5px;
+  display: block;
+}
+
+.botoes:hover {
+  opacity: 0.9;
+}
+
+.verde {
+  background-color: #1e3d2a;
+}
+
+.secundario {
+  border: 1px solid #1e3d2a;
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+#beep {
+  font-size: 11pt;
+  font-weight: 600;
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 2px solid #cacaca;
+  cursor: pointer;
+}
+
+.site {
+  display: none;
+}
+
+@media screen and (max-width: 1100px) {
+  .caixa {
+    margin: 0 20px;
+  }
+}
+
+@media print {
+  body {
+    background-color: transparent;
+  }
+
+  button, input, a, footer, .botoes, select{
+    display: none;
+  }
+}
